@@ -18,11 +18,15 @@ def main():
     with open(filename) as file:
         file_contents = file.read()
 
+    tokens = []
     for c in file_contents:
         if c == "(":
-            print("LEFT_PAREN ( null")
+            tokens.append("LEFT_PAREN ( null")
         elif c == ")":
-            print("RIGHT_PAREN ) null")
+            tokens.append("RIGHT_PAREN ) null")
+            
+    for token in tokens:
+        print(token)
     print("EOF  null")
 
 

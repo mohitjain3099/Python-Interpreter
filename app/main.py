@@ -18,15 +18,12 @@ def main():
     with open(filename) as file:
         file_contents = file.read()
 
-    if file_contents:
-        for c in file_contents:
-            if c == "(":
-                print("LEFT_PAREN ( null")
-            elif c == ")":
-                print("RIGHT_PAREN ) null")
-        print("EOF  null")
-    else:
-        print("EOF  null")
+    for c in file_contents:
+        if c == "(":
+            print("LEFT_PAREN ( null")
+        elif c == ")":
+            print("RIGHT_PAREN ) null")
+    print("EOF  null")
 
 
 if __name__ == "__main__":
